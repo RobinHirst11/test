@@ -1,8 +1,17 @@
-window.onload = function() {
-    var grid = document.querySelector('.grid');
-    var msnry = new Masonry(grid, {
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        gutter: 0
+const grid = document.querySelector('.grid');
+
+for (let i = 1; i <= 72; i++) {
+    const gridItem = document.createElement('div');
+    gridItem.classList.add('grid-item');
+    const img = document.createElement('img');
+    img.src = `images/${i}.webp`;
+    img.alt = `Image ${i}`;
+    gridItem.appendChild(img);
+    grid.appendChild(gridItem);
+}
+
+imagesLoaded(grid, function() {
+    new Masonry(grid, {
+        itemSelector: '.grid-item'
     });
-};
+});
