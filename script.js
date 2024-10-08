@@ -1,6 +1,6 @@
 const grid = document.querySelector('.grid');
 
-for (let i = 1; i <= 72; i++) {
+for (let i = 1; i <= 70; i++) {
     const gridItem = document.createElement('div');
     gridItem.classList.add('grid-item');
     const img = document.createElement('img');
